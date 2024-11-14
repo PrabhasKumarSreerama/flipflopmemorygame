@@ -1,0 +1,164 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: bisque;
+    height: 100vh;
+    padding-top: 5%;
+}
+
+.game-conatainer {
+    background-color: skyblue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;  
+}
+
+@media screen and (max-width:500px) {
+    .game-conatainer{
+        padding: 5px;
+    }
+
+    .container{
+        padding-top: 20%;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    align-items: center;
+}
+
+#restart-btn {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: rgb(83, 83, 232);
+    color: #ffffff;
+}
+
+#restart-btn:hover {
+    background-color: rgb(224, 69, 69);
+    cursor: pointer;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    place-items: center;
+}
+
+@media screen and (max-width:300px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+}
+
+.card {
+    width: 100px; 
+    height: 150px;
+    margin: 0; 
+    padding: 0;
+    justify-items: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+}
+
+@media screen and (max-width:500px) {
+    .card {
+        width: 60px; 
+        height: 90px;
+    }
+}
+
+
+.fruit-img {
+    width: 100%; 
+    display: block; 
+    border-radius: 0.5rem;
+    transform: rotateY(90deg); 
+    transition: all ease-in;
+    mix-blend-mode: multiply;
+    z-index: 10;
+}
+
+.back-img {
+    width: 100%; 
+    display: block; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.5rem;
+}
+
+.reveal .fruit-img {
+    transform: rotateY(0deg); 
+    transition-delay: 0.25s; 
+    /* cursor: not-allowed; */
+    pointer-events: none;
+    z-index: 10;
+}
+
+.reveal .back-img {
+    transform: rotateY(90deg); 
+    transition-delay: 0s;
+}
+
+.unclickable {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.result-display {
+    padding: 1rem auto;
+    color: rgb(2, 46, 2);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width:500px) {
+    .result-display {
+        font-size: medium;
+    }
+
+    .game-heading {
+        font-size: 1.5rem;
+    }
+
+    .game-desc {
+        font-size: small;
+    }
+
+    .header-footer p {
+        font-size: 0.8rem;
+    }
+
+    #restart-btn {
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.5rem;
+        border: none;
+        background-color: rgb(83, 83, 232);
+        color: #ffffff;
+        font-size: 0.7rem;
+    }
+}

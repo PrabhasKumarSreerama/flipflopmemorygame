@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip The Cards</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+    <div class="game-conatainer">
+        <header>
+            <h1 class="game-heading">Flip Match Game</h1>
+            <p class="game-desc">Just flip the desired cards</p>
+            <div class="header-footer">
+                <p>Moves: <span class="moves" id="moves">0</span></p>
+                <button id="restart-btn">Restart Game</button>
+            </div>
+        </header>
+        <main>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="./images/back.jpg" alt="backImage" class="back-img">
+                    <img id="1" src="./images/grapes.jpg" style="pointer-events: none;" alt="grapes" class="fruit-img" >
+                </div>
+                <div class="card">
+                    <img src="./images/back.jpg" alt="backImage" class="back-img">
+                    <img id="2" src="./images/grapes.jpg" style="pointer-events: none;" alt="grapes" class="fruit-img" >
+                </div>
+                <div class="card">
+                    <img src="./images/back.jpg" alt="backImage" class="back-img">
+                    <img id="3" src="./images/kiwi.png" style="pointer-events: none;" alt="kiwi" class="fruit-img" >
+                </div>
+                <div class="card">
+                    <img src="./images/back.jpg" alt="backImage" class="back-img">
+                    <img id="4" src="./images/kiwi.png" style="pointer-events: none;" alt="kiwi" class="fruit-img" >
+                </div>
+                <div class="card">
+                    <img src="./images/back.jpg" alt="backImage" class="back-img">
+                    <img id="5" src="./images/peach.png" style="pointer-events: none;" alt="peach" class="fruit-img" >
+                </div>
+                <div class="card">
+                    <img src="./images/back.jpg" alt="backImage" class="back-img">
+                    <img id="6" src="./images/peach.png" style="pointer-events: none;" alt="peach" class="fruit-img" >
+                </div>
+                <div class="card">
+                    <img src="./images/back.jpg" alt="backImage" class="back-img">
+                    <img id="7" src="./images/plum.png" style="pointer-events: none;" alt="plum" class="fruit-img" >
+                </div>
+                <div class="card">
+                    <img src="./images/back.jpg" alt="backImage" class="back-img">
+                    <img id="8" src="./images/plum.png" style="pointer-events: none;" alt="plum" class="fruit-img" >
+                </div>
+            </div>   
+        </main>
+        <footer>
+            <div class="result-display">
+                <span>&#127881;</span>Congrats!!You won game in Just <span class="moves" id="moves-win"></span> moves.
+            </div>
+        </footer>
+    </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
